@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<!--
+网站的标题
+-->
+<head>
+    <meta charset="="UTF-8">
+    <title>一亿气卡的前端基础学习</title>   
+</head>
+
+
+
+
+<body>
+    <p>
+        本教程是本人（Vader-002、一亿气卡）从零开始学习前端的时候编写，技术力可能较低所以出现错误。
+        <br>
+        可以在github上联系Vader-002提出你的指正和建议。
+        <br>
+        可以在examples文件夹看到一系列示例html文件。
+        <br>
+        同时该教程本质是一系列的前端文件，所有的代码运行均在你的本地设备上，并且文件内对网络的交付都已确保安全，我无法获取你的任何信息，请放心。
+        <br>
+        本篇目仅使用html编写，以和最初始的html编写匹配。
+    </p>
+
+
+
+    <h1>欢迎来到前端基础学习</h1>
+
+    <p>在这里你会学到你需要的前端基础知识</p>
+
+    <img src="imgs/main/hello1.png" alt="小一打招呼" width="300" loading="lazy">
+
+    <h1>了解前端</h1>
+    <p>
+        前端是网页或app界面里面，用户能看见、点击的部分，通过HTML、CSS、JavaScript等技术实现。
+        <br>
+        HTML负责内容的结构，也就是前端的整体框架结构。
+        <br>
+        CSS负责外观样式，也就是更具体的内容位置摆放，颜色等等。
+        <br>
+        JaveScript负责交互行为，例如点击、输入等等。
+        <br>
+    </p>
+
+
+
+    <h1>一、HTML</h1>
+
+
+    <h2>（一）前置准备</h2>
+
+    <p>
+        在三个技术中，我们先学习基础的HTML。
+        <br>
+        请先安装一个编程软件，例如VS Code等。注意请不要在word或者记事本上写程序，这样效率极低且可能会出现预期外的错误
+        <br>
+    </p>
+
+    <img src="imgs/main/vscode.png" alt="vscode的图标" loading="lazy">
+
+    <p>
+        同时保证你的电脑设备中有一个浏览器，例如Edge、Chrome
+        <br>
+    </p>
+
+    <img src="imgs/main/edge.png" alt="edge图标">
+
+    <p>
+        新建并命名一个文件夹，然后在编程软件中打开这个文件夹
+        <br>
+        然后创建一个初始html文件，请注意文件的后缀保证文件类型正确
+        <br>
+        同时需要提醒，文件和文件夹命名尽可能不要使用中文，因为部分机器对中文的编码不兼容可能导致代码无法运行
+    </p>
+
+    <img src="imgs/main/htmlnaming.png" alt="初始html文件创建" loading="lazy">
+
+
+    <h2>（二）正式编写</h2>
+
+
+    <h3>1.基础模板以及标题与段落</h3>
+
+    <p>
+        将下面的代码写入这个初始的html文件
+    </p>
+
+    <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt;我的网页&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;你好，世界！&lt;/h1&gt;
+        &lt;p&gt;这是我写的一个网页。&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+    </code></pre>
+
+    <p>显示效果如下图</p>
+
+    <img src="imgs/main/example1show1.png" alt="示例1展示" width="800" loading="lazy">
+
+    <p>
+        我们来理解一下每一行。
+        <br>
+        <br>
+        &lt;!DOCTYPE html&gt;是文档类型声明告诉浏览器：“这是一个 HTML5 网页，请用标准模式来解析。”这是避免浏览器用老旧的兼容模式显示，导致错误的页面显示。
+        <br>
+        <br>
+        接下来，我们先要知道，html用标签来描述的，有些标签成对出现开始和结束标签，有些则是单独出现。
+        <br>
+        注意接下来的&lt;html&gt;和最后一行的&lt;/html&gt;，这是典型的成对出现的标签，&lt;html&gt;是开始标签，&lt;/html&gt;是结束标签。而html是根标签，整个网页的所有内容都在这里面
+        <br>
+        <br>
+        然后看&lt;head&gt;和&lt;/head&gt;，head是头部标签，这是给浏览器、搜索引擎看的，不会在内部显示。
+        <br>
+        里面一般有
+    </p>
+
+    <ul>
+        <li>网页编码</li>
+        <li>网页标题</li>
+        <li>引入 CSS 文件和JavaScript 文件</li>
+    </ul>
+
+    <p>
+        用来控制编码，以及连接上CSS与JavaScript文件。
+        <br>
+        &lt;meta charset="UTF-8"&gt;是典型的单独标签，是设置字符编码为UTF-8，让中英文都正常显示避免乱码。charset是字符集，UTF-8则是标准基础的中文字符集编码。
+        <br>
+        &lt;title&gt;和&lt;/title&gt;是网页标题，会显示在
+    </p>
+
+    <ul>
+        <li>浏览器标签页</li>
+        <li>收藏网页时的默认名称</li>
+        <li>搜索引擎结果</li>
+    </ul>
+
+    <p>
+        <br>
+        &lt;body&gt;和&lt;/body&gt;之间，才是正式的网页内容，比如
+    </p>
+
+    <ul>
+        <li>标题</li>
+        <li>段落</li>
+        <li>图片</li>
+        <li>按钮</li>
+        <li>链接</li>
+        <li>列表</li>
+    </ul>
+
+    <p>
+        用户能看到的东西都在这里。
+        <br>
+        <br>
+        &lt;h1&gt;和&lt;/h1&gt;是标题，标题大小有六个级别，1到6，1最大，6最小
+        <br>
+        &lt;p&gt;和&lt;/p&gt;是段落内容浏览器会把里面的内容显示成一个段落，段落前后会自动留一点空隙，同时浏览器会根据浏览器宽度高度自行换行让整段话能正常显示。
+        <br>
+        换行需要在段落中用&lt;br&gt;，否则浏览器无法识别你的换行。
+        当然也可以使用&lt;pre&gt;和&lt;/pre&gt; 包裹 &lt;p&gt;和&lt;/p&gt; 保留段落在代码编写中的所有空格和换行。
+        <br>
+        <br>
+        你可以试着修改和增加标题、段落等等来体验对标题和段落的修改。
+        <br>
+        相似结构的html在example1可以找到。
+    </p>
+
+
+    <h3>2.列表和图片</h3>
+
+    <p>
+        前端页面展示不止需要文字，还需要列表和图片展示。
+        <br>
+        尝试把下面的代码写进你的html文件的&lt;body&gt;内部
+
+    </p>
+
+    <pre><code>
+&lt;h1&gt;水果有很多种&lt;/h1&gt;
+&lt;p&gt;介绍几种&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;苹果&lt;/li&gt;
+    &lt;li&gt;西瓜&lt;/li&gt;
+    &lt;li&gt;草莓&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;蔬菜有很多种&lt;/h1>
+&lt;p&gt;介绍几种&lt;/p&gt;
+&lt;ol&gt;
+    &lt;li&gt;白菜&lt;/li&gt;
+    &lt;li&gt;南瓜&lt;/li&gt;
+    &lt;li&gt;冬瓜&lt;/li&gt;
+&lt;/ol&gt;
+
+    </code></pre>
+
+    <p>
+        显示效果如下图：
+    </p>
+
+    <img src="imgs/main/example2show1.png" alt="示例2展示" width="800" loading="lazy">
+
+    <p>
+        列表类型有三个，nl、ol、li。ul是无序列表，默认显示园点；ol是有序列表，默认显示数字；li则是列表项，表示列表中的一项
+        <br>
+        这三个都是成对标签，注意内容要包裹在其中。
+        <br>
+        你可以试着增加新的列表和列表项体验对列表的修改。
+        <br>
+        相似结构的html在example2可以找到。
+    </p>
+
+    <p>
+        我们再学习图片的显示。
+        <br>
+        图片显示要使用独立标签&lt;img&gt;，例如，为了显示上面的示例图，本篇的html代码中使用了
+        <br>
+        &lt;img src="imgs/main/example2show1.png" alt="示例2展示" width="800" loading="lazy"&gt; 
+        <br>
+        来显示图片。
+        img是图片，有如下几个属性：
+    </p>
+
+    <ul>
+        <li>src 是图片的地址，是必须写的，可以写能访问到的本地文件夹的图片，也可以是网络上网址提供的图片地址</li>
+        <li>alt 是图片加载失败时候显示的文字，也可以写标注</li>
+        <li>width 是图片宽度，单位是像素，只写width会根据原图长宽比等比缩放</li>
+        <li>height 是图片高度，配合width可以对图片拉伸</li>
+        <li>title 是鼠标悬停时候的显示提示</li>
+        <li>loading 是加载模式，eager是在网页打开时立即加载，lazy是滚动到附近时候才加载</li>
+    </ul>
+    <p>
+        你可以试着在你的html里写一个&lt;img&gt;来显示你想显示的图片
+        <br>
+        相似结构的html在example3可以找到。
+    </p>
+
+</body>
+</html>
+
+
+
+
+
+        <!--
+        -->
