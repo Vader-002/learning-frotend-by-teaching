@@ -20,7 +20,7 @@
         <br>
         可以在examples文件夹看到一系列示例html文件。
         <br>
-        同时该教程本质是一系列的前端文件，所有的代码运行均在你的本地设备上，并且文件内对网络的交付都已确保安全，我无法获取你的任何信息，请放心。
+        同时该教程本质是一系列的前端文件，所有的代码运行均在你的本地设备上，并且文件内对网络的交互都已确保安全，我无法获取你的任何信息，请放心。
         <br>
         本篇目仅使用html编写，以和最初始的html编写匹配。
     </p>
@@ -243,6 +243,68 @@
         <br>
         相似结构的html在example3可以找到。
     </p>
+
+    <h3 id="链接">3.链接</h3>
+
+    <p>
+        可以用&lt;a&gt;来跳转到别的位置.
+        <br>
+        基本用法是 
+        <br>
+        <code>
+            &lt;a href="目标地址"&gt;链接文字&lt;/a&gt;
+        </code>
+        <br>
+        当然链接文字可以换成图片甚至别的块状元素，如
+        <br>
+        <code>
+            &lt;a href="目标地址"&gt;
+            <br>
+            &nbsp;&lt;img src="图片地址" alt ="图片"&gt;
+            <br>
+            &lt;/a&gt;
+        </code>
+        <br>
+        就会以图片形式显示链接，如下面的文字和图片，在连接网络并稳定情况下，点击均会跳转到百度搜索引擎（www.baidu.com）
+    </p>
+
+    <a href="https://www.baidu.com/">访问百度搜索引擎</a>
+    <br>
+    <a href="https://www.baidu.com/">
+        <img src="imgs/main/baiducom.png" alt="百度搜索引擎">
+    </a>
+
+    <p>
+        除了可以跳转网络上的网址，也可以用来跳转到别的需要的地方。
+        <br>
+        不同跳转目标和用法如下：
+    </p>
+
+    <ul>
+        <li>网络外部链接，用<code>http://</code>或<code>https://</code> </li>
+        <li>站内页面，通常是html文件所在目录的其他文件，直接使用本地绝对或相对路径</li>
+        <li>当前页面或其他页面的某个部分，用<code>#id</code>，注意跳转其他页面需要在<code>#id</code>前加上对应的页面的地址</li>
+        <li>邮件链接，用<code>mailto</code></li>
+        <li>电话和短信链接，分别用<code>tel</code>和<code>sms</code></li>
+        <li>下载文件用<code>download</code>，需要注意的是同域的文件可以直接下载，跨域（比如去别的网站）则需要考虑对话网站服务器的权限设置</li>
+    </ul>
+
+    <p>
+        下面是上述除了网络外部链接外的实现：
+        <br>
+        站内的其他页面：
+        <a href="examples/example1.html">跳转到本地的示例1文件</a> 
+        
+
+    </p>
+
+
+
+    <a href="https://www.bilibili.com">我常去的网站</a>
+
+
+
+
 
 </body>
 </html>
