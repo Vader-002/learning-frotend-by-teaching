@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="="UTF-8">
+    <title>html学习之二</title>   
+</head>
+
+<body>
+    <h1>了解列表和图片</h1>
+
+        <h2>列表和图片</h2>
+
+    <p>
+        前端页面展示不止需要文字，还需要列表和图片展示。
+        <br>
+        尝试把下面的代码写进你的html文件的&lt;body&gt;内部
+
+    </p>
+
+    <pre><code>
+&lt;h1&gt;水果有很多种&lt;/h1&gt;
+&lt;p&gt;介绍几种&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;苹果&lt;/li&gt;
+    &lt;li&gt;西瓜&lt;/li&gt;
+    &lt;li&gt;草莓&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;蔬菜有很多种&lt;/h1>
+&lt;p&gt;介绍几种&lt;/p&gt;
+&lt;ol&gt;
+    &lt;li&gt;白菜&lt;/li&gt;
+    &lt;li&gt;南瓜&lt;/li&gt;
+    &lt;li&gt;冬瓜&lt;/li&gt;
+&lt;/ol&gt;
+
+    </code></pre>
+
+    <p>
+        显示效果如下图：
+    </p>
+
+    <img src="../imgs/learnimgs/html/html2-1.png" alt="示例2展示" width="800" loading="lazy">
+
+    <p>
+        列表类型有三个，nl、ol、li。ul是无序列表，默认显示园点；ol是有序列表，默认显示数字；li则是列表项，表示列表中的一项
+        <br>
+        这三个都是成对标签，注意内容要包裹在其中。
+        <br>
+        你可以试着增加新的列表和列表项体验对列表的修改。
+        <br>
+        相似结构的html在htmlexample2可以找到。
+    </p>
+
+    <p>
+        我们再学习图片的显示。
+        <br>
+        图片显示要使用独立标签&lt;img&gt;，例如，为了显示上面的示例图，本篇的html代码中使用了
+        <br>img src="../imgs/learnimgs/html/html2-1.png" alt="示例2展示" width="800" loading="lazy"&gt; 
+        <br>
+        来显示图片。
+        img是图片，有如下几个属性：
+    </p>
+
+    <ul>
+        <li>src 是图片的地址，是必须写的，可以写能访问到的本地文件夹的图片，也可以是网络上网址提供的图片地址</li>
+        <li>alt 是图片加载失败时候显示的文字，也可以写标注</li>
+        <li>width 是图片宽度，单位是像素，只写width会根据原图长宽比等比缩放</li>
+        <li>height 是图片高度，配合width可以对图片拉伸</li>
+        <li>title 是鼠标悬停时候的显示提示</li>
+        <li>loading 是加载模式，eager是在网页打开时立即加载，lazy是滚动到附近时候才加载</li>
+    </ul>
+
+    <p>这是一个加载失败的图片的示例：</p>
+    <img src="../imgs/learnimgs/html/html2-2.png" alt="加载失败的图片的示例" width="300" loading="lazy">
+
+    <p>
+        你可以试着在你的html里写一个&lt;img&gt;来显示你想显示的图片
+        <br>
+        相似结构的html在htmlexample3可以找到。
+    </p>
+
+
+
+
+
+
+
+
+
+</body>
