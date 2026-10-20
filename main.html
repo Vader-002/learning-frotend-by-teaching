@@ -63,11 +63,17 @@
 
     <img src="imgs/main/edge.png" alt="edge图标">
 
+
+    <p>
+        那么我们就开始吧，建议从html开始学习，再了解css和javascript
+    </p>
+
     <h1 id="学习选择">学习选择：</h1>
     <h2>html学习：</h2>
     <ol>
-        <li><a href="learnhtml/learnhtml1.html">html学习之一</a></li>
-        <li><a href="learnhtml/learnhtml2.html">html学习之二</a></li>
+        <li><a href="learnhtml/learnhtml1.html" target="_blank" title="前往学习html之一">html学习之一</a></li>
+        <li><a href="learnhtml/learnhtml2.html" target="_blank" title="前往学习html之二">html学习之二</a></li>
+        <li><a href="learnhtml/learnhtml3.html" target="_blank" title="前往学习html之三">html学习之三</a></li>
     </ol>
 
     <h2>javaScript学习：</h2>
@@ -89,132 +95,13 @@
     <br>
     <br>
     <br>
-    <h3>2.列表和图片</h3>
-
-    <p>
-        前端页面展示不止需要文字，还需要列表和图片展示。
-        <br>
-        尝试把下面的代码写进你的html文件的&lt;body&gt;内部
-
-    </p>
-
-    <pre><code>
-&lt;h1&gt;水果有很多种&lt;/h1&gt;
-&lt;p&gt;介绍几种&lt;/p&gt;
-&lt;ul&gt;
-    &lt;li&gt;苹果&lt;/li&gt;
-    &lt;li&gt;西瓜&lt;/li&gt;
-    &lt;li&gt;草莓&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1&gt;蔬菜有很多种&lt;/h1>
-&lt;p&gt;介绍几种&lt;/p&gt;
-&lt;ol&gt;
-    &lt;li&gt;白菜&lt;/li&gt;
-    &lt;li&gt;南瓜&lt;/li&gt;
-    &lt;li&gt;冬瓜&lt;/li&gt;
-&lt;/ol&gt;
-
-    </code></pre>
-
-    <p>
-        显示效果如下图：
-    </p>
-
-    <img src="imgs/main/example2show1.png" alt="示例2展示" width="800" loading="lazy">
-
-    <p>
-        列表类型有三个，nl、ol、li。ul是无序列表，默认显示园点；ol是有序列表，默认显示数字；li则是列表项，表示列表中的一项
-        <br>
-        这三个都是成对标签，注意内容要包裹在其中。
-        <br>
-        你可以试着增加新的列表和列表项体验对列表的修改。
-        <br>
-        相似结构的html在example2可以找到。
-    </p>
-
-    <p>
-        我们再学习图片的显示。
-        <br>
-        图片显示要使用独立标签&lt;img&gt;，例如，为了显示上面的示例图，本篇的html代码中使用了
-        <br>
-        &lt;img src="imgs/main/example2show1.png" alt="示例2展示" width="800" loading="lazy"&gt; 
-        <br>
-        来显示图片。
-        img是图片，有如下几个属性：
-    </p>
-
-    <ul>
-        <li>src 是图片的地址，是必须写的，可以写能访问到的本地文件夹的图片，也可以是网络上网址提供的图片地址</li>
-        <li>alt 是图片加载失败时候显示的文字，也可以写标注</li>
-        <li>width 是图片宽度，单位是像素，只写width会根据原图长宽比等比缩放</li>
-        <li>height 是图片高度，配合width可以对图片拉伸</li>
-        <li>title 是鼠标悬停时候的显示提示</li>
-        <li>loading 是加载模式，eager是在网页打开时立即加载，lazy是滚动到附近时候才加载</li>
-    </ul>
-    <p>
-        你可以试着在你的html里写一个&lt;img&gt;来显示你想显示的图片
-        <br>
-        相似结构的html在example3可以找到。
-    </p>
-
-    <h3 id="链接">3.链接</h3>
-
-    <p>
-        可以用&lt;a&gt;来跳转到别的位置.
-        <br>
-        基本用法是 
-        <br>
-        <code>
-            &lt;a href="目标地址"&gt;链接文字&lt;/a&gt;
-        </code>
-        <br>
-        当然链接文字可以换成图片甚至别的块状元素，如
-        <br>
-        <code>
-            &lt;a href="目标地址"&gt;
-            <br>
-            &nbsp;&lt;img src="图片地址" alt ="图片"&gt;
-            <br>
-            &lt;/a&gt;
-        </code>
-        <br>
-        就会以图片形式显示链接，如下面的文字和图片，在连接网络并稳定情况下，点击均会跳转到百度搜索引擎（www.baidu.com）
-    </p>
-
-    <a href="https://www.baidu.com/">访问百度搜索引擎</a>
-    <br>
-    <a href="https://www.baidu.com/">
-        <img src="imgs/main/baiducom.png" alt="百度搜索引擎">
-    </a>
-
-    <p>
-        除了可以跳转网络上的网址，也可以用来跳转到别的需要的地方。
-        <br>
-        不同跳转目标和用法如下：
-    </p>
-
-    <ul>
-        <li>网络外部链接，用<code>http://</code>或<code>https://</code> </li>
-        <li>站内页面，通常是html文件所在目录的其他文件，直接使用本地绝对或相对路径</li>
-        <li>当前页面或其他页面的某个部分，用<code>#id</code>，注意跳转其他页面需要在<code>#id</code>前加上对应的页面的地址</li>
-        <li>邮件链接，用<code>mailto</code></li>
-        <li>电话和短信链接，分别用<code>tel</code>和<code>sms</code></li>
-        <li>下载文件用<code>download</code>，需要注意的是同域的文件可以直接下载，跨域（比如去别的网站）则需要考虑对话网站服务器的权限设置</li>
-    </ul>
-
-    <p>
-        下面是上述除了网络外部链接外的实现：
-        <br>
-        站内的其他页面：
-        <a href="examples/example1.html">跳转到本地的示例1文件</a> 
-        
-
-    </p>
 
 
 
-    <a href="https://www.bilibili.com">我常去的网站</a>
+
+
+
+
 
 
 

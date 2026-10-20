@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="="UTF-8">
+    <title>html学习之三</title>   
+</head>
+
+<body>
+    <h1 id="页面顶部">了解链接</h1>
+
+    <h2>基本用法</h2>
+
+    <p>
+        html里可以用&lt;a&gt;来跳转到别的位置
+        <br>
+        基本用法是 
+        <br>
+        <code>
+            &lt;a href="目标地址"&gt;链接文字&lt;/a&gt;
+        </code>
+        <br>
+        当然链接文字可以换成图片甚至别的块状元素，如
+        <br>
+        <code>
+            &lt;a href="目标地址"&gt;
+            <br>
+            &nbsp;&lt;img src="图片地址" alt ="图片"&gt;
+            <br>
+            &lt;/a&gt;
+        </code>
+        <br>
+        就会以图片形式显示链接，如下面的文字和图片，在连接网络并稳定情况下，点击均会跳转到百度搜索引擎（www.baidu.com）
+    </p>
+
+    <a href="https://www.baidu.com/" >访问百度搜索引擎</a>
+    <br>
+    <a href="https://www.baidu.com/">
+        <img src="../imgs/learnimgs/html/html3-1.png" alt="百度搜索引擎">
+    </a>
+
+    <p>
+        除了可以跳转网络上的网址，也可以用来跳转到别的需要的地方。
+        <br>
+        不同跳转目标和用法如下：
+    </p>
+
+    <ul>
+        <li>网络外部链接，用<code>http://</code>或<code>https://</code> </li>
+        <li>站内页面，通常是html文件所在目录的其他文件，直接使用本地绝对或相对路径</li>
+        <li>当前页面或其他页面的某个部分，用<code>#id</code>，注意跳转其他页面需要在<code>#id</code>前加上对应的页面的地址</li>
+        <li>邮件链接，用<code>mailto</code></li>
+        <li>电话和短信链接，分别用<code>tel</code>和<code>sms</code></li>
+        <li>下载文件用<code>download</code>，需要注意的是同域的文件可以直接下载，跨域（比如去别的网站）则需要考虑对话网站服务器的权限设置</li>
+    </ul>
+
+    <p>
+        注意到id这一概念，这是一个可以在html文件里面给一个元素写的标识，可以用于跳转
+        <br>
+        例如可以写&lt;p id="元素a"&gt;，这样可以用于&lt;a&gt;跳转等功能。
+    </p>
+
+    <p>
+        下面是上述除了网络外部链接外的实现：
+        <br>
+        <a href="../main.html">跳转回到首页（main.html）</a>
+        <br>
+        代码为：&lt;a href="../main.html"&gt;跳转回到首页（main.html）&lt;/a&gt;
+        <br>
+        <br>
+        <a href="#页面顶部">跳转到本页面的顶部。</a>
+        <br>
+        代码为：&lt;a href="#页面顶部"&gt;跳转到本页面的顶部&lt;/a&gt; 
+        <br>
+        <br>
+        <a href="mailto:test@example.com">打开系统默认的电子邮箱软件准备发邮件给test@example.com</a>
+        <br>
+        代码为：&lt;a href="mailto:test@example.com"&gt;打开系统默认的电子邮箱准备发邮件给test@example.com&lt;/a&gt;
+        <br>
+        <br>
+        <a href="tel:+8613800000000">打开默认电话准备拨打给+8613800000000</a>
+        <br>
+        代码为：&lt; href="tel:+8613800000000"&gt;拨打电话&lt;/a&gt;
+        <br>
+        <br>
+        <a href="sms:+8613800000000">打开短信准备发短信给+8613800000000</a>
+        <br>
+        代码为：&lt;a href="sms:+8613800000000"&gt;发送短信&lt;/a&gt;
+        <br>
+        注意此处电脑端可能因为软件和硬件原因无法拨打电话和发短信。
+        <br>
+        <br>
+        <a href="files/report.pdf" download="2024报告.pdf">从files/report.pdf下载report.pdf并重命名为2024报告.pdf</a>
+        <br>
+        代码为：&lt;a href="files/report.pdf" download="2024报告.pdf"&gt;从files/report.pdf下载report.pdf并重命名为2024报告.pdf&lt;/a&gt;
+        <br>
+        文件夹里没有files这个文件夹和report.pdf这个文件，所以此处下载不了是正常的。
+        <br>
+        注意：download 通常只对同源文件有效，跨域文件可能无效。
+    </p>
+
+    <h2>target属性</h2>
+
+    <p>
+        &lt;a&gt;还有target属性可以设置，控制的是点击链接后，新页面在哪里打开。
+        <br>
+        target属性可以不写明，默认为_self，共有以下类型：
+        <ul>
+            <li>_self是替换当前页面</li>
+            <li>_blank是新开一个标签页</li>
+            <li>_parent是在父级浏览上下文里打开。<br>这个值主要用在 iframe 里：如果当前页面被嵌在某个 iframe 中，_parent 表示"在我外面那一层打开"。<br>如果当前页面没有父级（就是最外层标签页），_parent 的行为和 _self 一样。</li>
+            <li>_top是在最顶层打开。<br>不管嵌套了多少层 iframe，都跳出所有框架，在最外层的标签页里打开。</li>
+        </ul>
+        目前我们还未学习iframe部分，可以先不用管_parent和_top
+        <br>
+        实际开发中，99% 的情况只会用 _self（默认）和 _blank。 _parent 和 _top 主要在 iframe 场景下用。
+    </p>
+
+    <p>
+        target 的值除了上述四个值，还可以是任意你起的名字。如下面：
+        <br>
+        <a href="https://www.baidu.com" target="myWindow">百度</a>
+        <br>
+        <a href="https://www.qq.com" target="myWindow">腾讯</a>
+        <br>
+        &lt;a href="https://www.baidu.com" target="myWindow"&gt;百度&lt;/a&gt;
+        <br>
+        &lt;a href="https://www.qq.com" target="myWindow&gt;腾讯&lt;/a&gt;
+        <br>
+        规则是这样的：
+        <br>
+        第一次点击"百度"：因为还没有叫 myWindow 的窗口，浏览器会新开一个标签页，并给它起名 myWindow。
+        <br>
+        再点击"腾讯"：浏览器发现已经有一个叫 myWindow 的标签页了，于是在那个标签页里打开腾讯，覆盖掉百度。
+        <br>
+        再点"百度"：又回到那个标签页，覆盖掉腾讯。
+        <br>
+        也就是说：同名的 target 会复用同一个标签页。
+        <br>
+        这个特性可以用来做"预览窗口"这类功能：多个链接都指向同一个预览标签页，点哪个就在同一个窗口里刷新。
+        <br>
+        <br>
+    </p>
+
+
+    <p>
+        如果整个页面大部分链接都要新标签页打开，一个个写 target 太烦。可以在 &lt;head&gt; 里写：
+        <br>
+        &lt;head&gt;
+        <br>
+            &lt;base target="_blank"&gt;
+        <br>
+        &lt;/head&gt;
+        <br>
+        这样页面上所有没写 target 的链接，默认都变成 _blank。
+        <br>
+        要注意两点：
+        <br>
+        &lt;base&gt; 只能有一个，且必须放在 &lt;head&gt; 里。
+        <br>
+        &lt;base&gt; 除了 target，还可以设 href（影响所有相对路径的基准），所以用之前想清楚，不要影响相对路径。
+    </p>
+
+    <h2>title属性</h2>
+
+    <p>
+        &lt;a&gt;还有title属性可以设置，控制的是悬停提示。
+        <br>
+        例如下面的百度网址链接，鼠标悬停会显示
+        <br>
+        <a href="https://www.baidu.com/" title="打开百度">访问百度搜索引擎</a>
+        <br>    
+        &lt;a href="https://www.baidu.com/" title="打开百度"&gt;访问百度搜索引擎&lt;/a&gt;
+        <br>
+        如图，可以看到"打开百度"的悬停提示：
+        <br>
+        <img src="../imgs/learnimgs/html/html3-2.png">
+        <br>
+        <br>
+        实际上，title并不是&lt;a&gt;的专属，而是每一个元素都可以用。
+        <br>
+        例如，下面的这张图片悬停也可以看到提示：
+        <br>
+        <img src="../imgs/learnimgs/html/html3-3.png" title="微信和QQ">
+        <br>
+        效果如下：
+        <br>
+        <img src="../imgs/learnimgs/html/html3-4.png">
+        <br>
+        注意title在移动端如手机、平板电脑等因为没有光标而不适用，另外用tab选中也不能显示。
+    </p>
+
+    <a href="../main.html#学习选择">点击回到首页</a>
+</body>
