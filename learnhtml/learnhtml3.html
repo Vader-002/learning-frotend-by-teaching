@@ -66,35 +66,37 @@
         <br>
         <a href="../main.html">跳转回到首页（main.html）</a>
         <br>
-        代码为：&lt;a href="../main.html"&gt;跳转回到首页（main.html）&lt;/a&gt;
+        代码为：<pre>&lt;a href="../main.html"&gt;跳转回到首页（main.html）&lt;/a&gt;</pre>
         <br>
-        <br>
+        
         <a href="#页面顶部">跳转到本页面的顶部。</a>
         <br>
-        代码为：&lt;a href="#页面顶部"&gt;跳转到本页面的顶部&lt;/a&gt; 
+        代码为：<pre>&lt;a href="#页面顶部"&gt;跳转到本页面的顶部&lt;/a&gt; </pre>
         <br>
-        <br>
+
         <a href="mailto:test@example.com">打开系统默认的电子邮箱软件准备发邮件给test@example.com</a>
         <br>
-        代码为：&lt;a href="mailto:test@example.com"&gt;打开系统默认的电子邮箱准备发邮件给test@example.com&lt;/a&gt;
+        代码为：<pre>&lt;a href="mailto:test@example.com"&gt;打开系统默认的电子邮箱准备发邮件给test@example.com&lt;/a&gt;</pre>
         <br>
-        <br>
+
         <a href="tel:+8613800000000">打开默认电话准备拨打给+8613800000000</a>
         <br>
-        代码为：&lt; href="tel:+8613800000000"&gt;拨打电话&lt;/a&gt;
+        代码为：<pre>&lt; href="tel:+8613800000000"&gt;拨打电话&lt;/a&gt;</pre>
         <br>
-        <br>
+
         <a href="sms:+8613800000000">打开短信准备发短信给+8613800000000</a>
         <br>
-        代码为：&lt;a href="sms:+8613800000000"&gt;发送短信&lt;/a&gt;
+        代码为：<pre>&lt;a href="sms:+8613800000000"&gt;发送短信&lt;/a&gt;</pre>
         <br>
+
         注意此处电脑端可能因为软件和硬件原因无法拨打电话和发短信。
         <br>
         <br>
         <a href="files/report.pdf" download="2024报告.pdf">从files/report.pdf下载report.pdf并重命名为2024报告.pdf</a>
         <br>
-        代码为：&lt;a href="files/report.pdf" download="2024报告.pdf"&gt;从files/report.pdf下载report.pdf并重命名为2024报告.pdf&lt;/a&gt;
+        代码为：<pre>&lt;a href="files/report.pdf" download="2024报告.pdf"&gt;从files/report.pdf下载report.pdf并重命名为2024报告.pdf&lt;/a&gt;</pre>
         <br>
+
         文件夹里没有files这个文件夹和report.pdf这个文件，所以此处下载不了是正常的。
         <br>
         注意：download 通常只对同源文件有效，跨域文件可能无效。
@@ -124,10 +126,8 @@
         <br>
         <a href="https://www.qq.com" target="myWindow">腾讯</a>
         <br>
-        &lt;a href="https://www.baidu.com" target="myWindow"&gt;百度&lt;/a&gt;
-        <br>
-        &lt;a href="https://www.qq.com" target="myWindow&gt;腾讯&lt;/a&gt;
-        <br>
+        <pre>&lt;a href="https://www.baidu.com" target="myWindow"&gt;百度&lt;/a&gt;</pre>
+        <pre>&lt;a href="https://www.qq.com" target="myWindow&gt;腾讯&lt;/a&gt;</pre>
         规则是这样的：
         <br>
         第一次点击"百度"：因为还没有叫 myWindow 的窗口，浏览器会新开一个标签页，并给它起名 myWindow。
@@ -146,13 +146,9 @@
 
     <p>
         如果整个页面大部分链接都要新标签页打开，一个个写 target 太烦。可以在 &lt;head&gt; 里写：
-        <br>
-        &lt;head&gt;
-        <br>
-            &lt;base target="_blank"&gt;
-        <br>
-        &lt;/head&gt;
-        <br>
+<pre>&lt;head&gt;
+    &lt;base target="_blank"&gt;
+&lt;/head&gt;</pre>
         这样页面上所有没写 target 的链接，默认都变成 _blank。
         <br>
         要注意两点：
@@ -171,8 +167,7 @@
         <br>
         <a href="https://www.baidu.com/" title="打开百度">访问百度搜索引擎</a>
         <br>    
-        &lt;a href="https://www.baidu.com/" title="打开百度"&gt;访问百度搜索引擎&lt;/a&gt;
-        <br>
+<pre>&lt;a href="https://www.baidu.com/" title="打开百度"&gt;访问百度搜索引擎&lt;/a&gt;</pre>
         如图，可以看到"打开百度"的悬停提示：
         <br>
         <img src="../imgs/learnimgs/html/html3-2.png">
