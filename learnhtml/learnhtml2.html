@@ -45,12 +45,73 @@
     <img src="../imgs/learnimgs/html/html2-1.png" alt="示例2展示" width="800" loading="lazy">
 
     <p>
-        列表类型有三个，nl、ol、li。ul是无序列表，默认显示园点；ol是有序列表，默认显示数字；li则是列表项，表示列表中的一项
+        列表类型有多种，nl、ol、li。ul是无序列表，默认显示园点；ol是有序列表，默认显示数字；li则是列表项，表示列表中的一项
         <br>
-        这三个都是成对标签，注意内容要包裹在其中。
+        这三个都是成对标签，注意内容要包裹在其中，&lt;li&gt;的内容除了文本还可以放块级元素，例如再嵌套列表、图片
         <br>
         你可以试着增加新的列表和列表项体验对列表的修改。
         <br>
+        结构为：
+        <br>
+        
+<pre><code>
+&lt;ul&gt;
+    &lt;li&gt;内容a&lt;/li&gt;
+    &lt;li&gt;内容b&lt;/li&gt;
+    &lt;li&gt;内容c&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+    &lt;li&gt;内容a&lt;/li&gt;
+    &lt;li&gt;内容b&lt;/li&gt;
+    &lt;li&gt;内容c&lt;/li&gt;
+&lt;/ol&gt;
+    </code></pre>
+
+    </p>
+
+    <p>
+        另外还有定义列表dl、dt、dd，和 ul/ol 结构不同，是"成对"出现的。
+        <br>
+        例如：
+<pre><code>
+&lt;dl&gt;
+  &lt;dt&gt;HTML&lt;/dt&gt;
+  &lt;dd&gt;超文本标记语言，负责网页的结构。&lt;/dd&gt;
+  &lt;dd&gt;前端的重要基础。&lt;/dd&gt;
+
+  &lt;dt&gt;CSS&lt;/dt&gt;
+  &lt;dd&gt;层叠样式表，负责网页的外观。&lt;/dd&gt;
+
+  &lt;dt&gt;JavaScript&lt;/dt&gt;
+  &lt;dd&gt;编程语言，负责网页的交互。&lt;/dd&gt;
+&lt;/dl&gt;
+</code></pre>
+
+        效果如下：
+    </p>
+
+    <img src="../imgs/learnimgs/html/html2-2.png" alt="dl列表显示效果">
+
+    <p>
+        与ul、ol、li相似，也可以在&lt;dd&gt;里放块状元素。
+        结构为：
+<pre><code>
+&lt;dl&gt;
+  &lt;dt&gt;名词1&lt;/dt&gt;
+  &lt;dd&gt;名词1解释1&lt;/dd&gt;
+  &lt;dd&gt;名词1解释2&lt;/dd&gt;
+
+  &lt;dt&gt;名词2&lt;/dt&gt;
+  &lt;dd&gt;名词2解释&lt;/dd&gt;
+
+  &lt;dt&gt;名词3&lt;/dt&gt;
+  &lt;dd&gt;名词3解释&lt;/dd&gt;
+&lt;/dl&gt;
+</code></pre>
+    </p>
+
+    <p>
         相似结构的html在htmlexample2可以找到。
     </p>
 
@@ -68,16 +129,32 @@
     </p>
 
     <ul>
-        <li>src 是图片的地址，是必须写的，可以写能访问到的本地文件夹的图片，也可以是网络上网址提供的图片地址</li>
-        <li>alt 是图片加载失败时候显示的文字，也可以写标注</li>
+        <li>
+            src 是图片的地址，是必须写的，可以写能访问到的本地文件夹的图片，也可以是网络上网址提供的图片地址
+            <br>
+            注意如果写相对地址，则是相对于当前html文件的相对地址
+        </li>
+        <li>alt 是图片加载失败时候显示的文字，同时屏幕阅读器会读出来给视障用户听，搜索引擎也靠它理解图片内容，也可以写标注</li>
         <li>width 是图片宽度，单位是像素，只写width会根据原图长宽比等比缩放</li>
         <li>height 是图片高度，配合width可以对图片拉伸</li>
         <li>title 是鼠标悬停时候的显示提示</li>
         <li>loading 是加载模式，eager是在网页打开时立即加载，lazy是滚动到附近时候才加载</li>
     </ul>
 
+    <p>
+        &lt;img&gt;允许的图片格式有很多，有以下几种：
+    </p>
+
+    <ul>
+        <li>jpg/jpeg  文件大小较小，但会有损压缩且不支持透明</li>
+        <li>png 无损，支持透明，但文件大小较大</li>
+        <li>gif 动图，但颜色少，格式老</li>
+        <li>svg 矢量图，放大不糊，文件小</li>
+        <li>webp  新格式，同样质量文件更小，现代浏览器都支持</li>
+    </ul>
+
     <p>这是一个加载失败的图片的示例：</p>
-    <img src="../imgs/learnimgs/html/html2-2.png" alt="加载失败的图片的示例" width="300" loading="lazy">
+    <img src="../imgs/learnimgs/html/html2-3.png" alt="加载失败的图片的示例" width="300" loading="lazy">
 
     <p>
         你可以试着在你的html里写一个&lt;img&gt;来显示你想显示的图片
@@ -85,5 +162,5 @@
         相似结构的html在htmlexample3可以找到。
     </p>
 
-    <a href="../main.html#学习选择">点击回到首页</a>
+    <a href="../index.html#学习选择">点击回到首页</a>
 </body>
